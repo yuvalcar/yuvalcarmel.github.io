@@ -226,9 +226,9 @@ hr {
         margin-left: 9px;
         // margin-top: 59px;
 
-	&.keep-playing-button {
-	  display: none;
-	}
+        &.keep-playing-button {
+          display: none;
+        }
       }
 
       @include animation(fade-in 800ms ease $transition-speed * 12);
@@ -238,9 +238,9 @@ hr {
         background: rgba($tile-gold-color, .5);
         color: $bright-text-color;
 
-	a.keep-playing-button {
-	  display: inline-block;
-	}
+        a.keep-playing-button {
+          display: inline-block;
+        }
       }
 
       &.game-won, &.game-over {
@@ -322,7 +322,7 @@ hr {
     font-weight: bold;
     z-index: 10;
 
-    font-size: 55px;
+    font-size: 35px;
   }
 
   // Movement transition
@@ -337,27 +337,27 @@ hr {
 
   // Colors for all 11 states, false = no special color
   $special-colors: #FF0000 true, // 2
-                   #008000 true, // 4
-                   #A52A2A true, // 8
-                   #800080 true, // 16
-                   #8B0000 true, // 32
-                   #FFA500 true, // 64
-                   #0000FF true, // 128
-                   #006400 true, // 256
-                   #808080 true, // 512
-                   #000000 true, // 1024
-                   false true; // 2048
+  #008000 true, // 4
+  #A52A2A true, // 8
+  #800080 true, // 16
+  #8B0000 true, // 32
+  #FFA500 true, // 64
+  #0000FF true, // 128
+  #006400 true, // 256
+  #808080 true, // 512
+  #000000 true, // 1024
+  false true; // 2048
 
   $special-text: "דם",
-                 "צפרדע",
-                 "כינים",
-                 "ערוב",
-                 "דבר",
-                 "שחין",
-                 "ברד",
-                 "ארבה",
-                 "חושך",
-                 "מכת בכורות";
+  "צפרדע",
+  "כינים",
+  "ערוב",
+  "דבר",
+  "שחין",
+  "ברד",
+  "ארבה",
+  "חושך",
+  "מכת בכורות";
 
   // Build tile colors
   @while $exponent <= $limit {
@@ -389,22 +389,22 @@ hr {
 
       @if not $special-background {
         box-shadow: 0 0 30px 10px rgba($tile-gold-glow-color, $glow-opacity / 1.8),
-                    inset 0 0 0 1px rgba(white, $glow-opacity / 3);
+        inset 0 0 0 1px rgba(white, $glow-opacity / 3);
       }
 
       // Adjust font size for bigger numbers
-      @if $power >= 100 and $power < 1000 {
-        font-size: 45px;
+      @if $power >= 10 and $power < 1000 {
+        font-size: 15px;
 
         // Media queries placed here to avoid carrying over the rest of the logic
         @include smaller($mobile-threshold) {
-          font-size: 25px;
+          font-size: 15px;
         }
       } @else if $power >= 1000 {
-        font-size: 35px;
+        font-size: 15px;
 
         @include smaller($mobile-threshold) {
-          font-size: 15px;
+          font-size: 10px;
         }
       }
     }
@@ -417,7 +417,7 @@ hr {
     color: $bright-text-color;
     background: mix(#333, $tile-gold-color, 95%);
 
-    font-size: 30px;
+    font-size: 20px;
 
     @include smaller($mobile-threshold) {
       font-size: 10px;
