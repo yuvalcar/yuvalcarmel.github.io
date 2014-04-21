@@ -313,7 +313,8 @@ hr {
     z-index: 10;
     font-size: 45px; }
   .tile.tile-2 .tile-inner {
-      background-image: url(../meta/allmashov.png);
+      background-image: url(../meta/2.png);
+      background-position: center;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-4 .tile-inner {
     background: url(../meta/allmashov.png);
