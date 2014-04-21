@@ -56,9 +56,8 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   // We can't use classlist because it somehow glitches when replacing classes
   var classes = ["tile", "tile-" + tile.value, positionClass];
-  var specialText = ["דם", "צפרדע", "כינים", "ערוב", "דבר", "שחין", "ברד", "ארבה", "חושך", "מכת בכורות"];
 
-  if (tile.value > 1024) classes.push("tile-super");
+  if (tile.value > 2048) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
 
@@ -69,7 +68,7 @@ HTMLActuator.prototype.addTile = function (tile) {
     ++exponent;
   }
 
-  inner.textContent = specialText[exponent-1];
+  inner.textContent = "";
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -133,7 +132,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win! The Egyptians are all dead!!! Hooray!" : "Game over! You'll stay a slave forever!!!";
+  var message = won ? "You win! You're a Pazam monster!" : "Game over! No lunch for you!";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
